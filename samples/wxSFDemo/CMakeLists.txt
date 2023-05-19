@@ -1,49 +1,15 @@
 
-add_executable(wxSFDemo
-        Art.h
-        FrameCanvas.cpp
-        FrameCanvas.h
-        GUI.cpp
+file(GLOB SRCS
+        *.cpp
+        *.h
         GUI.fbp
-        GUI.h
-        Ids.h
-        MainApp.cpp
-        MainApp.h
-        MainFrame.cpp
-        MainFrame.h
-        Images/motyl.bmp
-        Images/motyl2.bmp
-        wx_pch.cpp
-        wx_pch.h
+        Images/*.bmp
         wxSF.rc
-        res/AlignBottom.xpm
-        res/AlignCenter.xpm
-        res/AlignLeft.xpm
-        res/AlignMiddle.xpm
-        res/AlignRight.xpm
-        res/AlignTop.xpm
-        res/Bitmap.xpm
-        res/Circle.xpm
-        res/Curve.xpm
-        res/Diamond.xpm
-        res/EditText.xpm
-        res/Ellipse.xpm
-        res/FixedRect.xpm
-        res/FlexGrid.xpm
-        res/GC.xpm
-        res/Grid.xpm
-        res/Line.xpm
-        res/NoSource.xpm
-        res/OrthoLine.xpm
-        res/Rect.xpm
-        res/RoundOrthoLine.xpm
-        res/RoundRect.xpm
-        res/Shadow.xpm
-        res/StandAloneLine.xpm
-        res/Text.xpm
-        res/Tool.xpm
-        res/wx.xpm
+        res/*.xpm
 )
+
+add_executable(wxSFDemo ${SRCS})
+
 # and for each of your dependent executable/library targets:
 target_include_directories(wxSFDemo PRIVATE ${PROJECT_SOURCE_DIR}/include)
 

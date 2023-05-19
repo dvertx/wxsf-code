@@ -1,13 +1,12 @@
-add_executable(wxSFSample4
-        wxSFSample4App.cpp
-        wxSFSample4App.h
-        wxSFSample4Main.cpp
-        wxSFSample4Main.h
-        wx_pch.cpp
-        wx_pch.h
+file(GLOB SRCS
+        *.cpp
+        *.h
         wxSF.rc
-        res/wx.xpm
+        res/*.xpm
 )
+
+add_executable(wxSFSample4 ${SRCS})
+
 # and for each of your dependent executable/library targets:
 target_include_directories(wxSFSample4 PRIVATE ${PROJECT_SOURCE_DIR}/include)
 

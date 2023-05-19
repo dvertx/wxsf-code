@@ -1,17 +1,11 @@
-add_executable(wxSFSample2
-        SampleCanvas.cpp
-        SampleCanvas.h
-        SampleShape.cpp
-        SampleShape.h
-        wxSFSample2App.cpp
-        wxSFSample2App.h
-        wxSFSample2Main.cpp
-        wxSFSample2Main.h
-        wx_pch.cpp
-        wx_pch.h
+file(GLOB SRCS
+        *.cpp
+        *.h
         wxSF.rc
-        res/wx.xpm
+        res/*.xpm
 )
+
+add_executable(wxSFSample2 ${SRCS})
 
 # and for each of your dependent executable/library targets:
 target_include_directories(wxSFSample2 PRIVATE ${PROJECT_SOURCE_DIR}/include)
