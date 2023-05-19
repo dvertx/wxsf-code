@@ -18,3 +18,11 @@ x86/
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+## Ignore CMake cache files and build directories
+##
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+Makefile
