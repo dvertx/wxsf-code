@@ -1,5 +1,6 @@
-Changes in version 1.16.0 (2023-05-02):
+Changes in version 1.16.0 (2023-05-24):
 ---------------------------------------
+- Fix README and added CMake build instructions
 - Added github actions for ci build and dependabot <gulliver@traumkristalle.net>
 - Uses find_package in CMake <gulliver@traumkristalle.net>
 - Reorganized all readme_*.txt files into README markdown (rt@cfdconsultants.de)
