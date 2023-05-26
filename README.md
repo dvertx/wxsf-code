@@ -16,7 +16,7 @@ More over, the library source code is based on wxWidgets GUI toolkit, so it is p
 
 ## Requirements
 
-- wxShapeFramework requires installed wxWidgets (www.wxwidgets.org) on the build system. Tested with version 3.1.x and 3.2.x on Ubuntu 22.04 and Linux (Manjaro) target platforms.
+- wxShapeFramework requires installed wxWidgets (www.wxwidgets.org) on the build system. Tested with version 3.1.x and 3.2.x on Ubuntu 22.04 and Linux (Manjaro) target platforms, and on Windows 11.
 - Code::Blocks (www.codeblocks.org) IDE with MinGW C++ compiler or MS Visual Studio 2005/2008 Express are recommended for opening included workspace/project files but the library can be built from the command line as well.
 
 ## Distribution content
@@ -162,11 +162,12 @@ cmake --build release
 The commands will first create a ./release subdirectory, then build wxShapeFramework library and samples 
 within the subdirectory. You can use a different subdirectory name other than `release` if preferred.
 
-In Windows 11,  go to the main installation folder and type:
+In Windows 11 you might need to help CMake find required libraries by adding WX_DIR_LIB switch. 
+Go to the main installation folder and type:
 
 ```shell
 cmake -S . -B release -DWX_LIB_DIR=<directory of compiled/installed wxWidgets libraries>
 cmake --build release
 ```
-The directory usually is in the form of `C:/wxWidgets-3.1.5/lib/vc_x64_lib/`. Notice that CMake allows for 
-the definition of the directory using forward slashes.
+The directory usually is in the form of `C:/wxWidgets-3.1.5/lib/vc_x64_lib/` if compiled using Visual Studio.
+Notice that CMake allows you to define the directory using forward slashes.
