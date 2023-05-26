@@ -161,3 +161,12 @@ cmake --build release
 
 The commands will first create a ./release subdirectory, then build wxShapeFramework library and samples 
 within the subdirectory. You can use a different subdirectory name other than `release` if preferred.
+
+In Windows 11,  go to the main installation folder and type:
+
+```shell
+cmake -S . -B release -DWX_LIB_DIR=<directory of compiled/installed wxWidgets libraries>
+cmake --build release
+```
+The directory usually is in the form of `C:/wxWidgets-3.1.5/lib/vc_x64_lib/`. Notice that CMake allows for 
+the definition of the directory using forward slashes.
